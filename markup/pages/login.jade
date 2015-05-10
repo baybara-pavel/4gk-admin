@@ -1,0 +1,12 @@
+doctype html
+
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/signin/signin
+
+head
+  +head(head.login)
+body.page
+  +signin()
+  .page__footer
+      +footer()

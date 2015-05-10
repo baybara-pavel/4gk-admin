@@ -106,13 +106,13 @@ var tarsConfig = {
          * Port of local server for browser-sync
          * @type {Number}
          */
-        port: 3004,
+        port: 3000,
 
         /**
          * Switch to false, if you don't need to open browser in dev mode
          * @type {Boolean}
          */
-        open: true,
+        open: false,
 
         /**
          * Choose browser to open
