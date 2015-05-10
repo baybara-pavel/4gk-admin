@@ -3,6 +3,9 @@ head: {
         title: 'default title'
     },
     login: {
-        title: '4gkAdmin | LogIn'
+        title: 'ЧГК | Авторизация'
+    },
+    dashboard: {
+        title: 'ЧГК | Панель управления'
     }
 }

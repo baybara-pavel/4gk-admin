@@ -6,16 +6,99 @@ doctype html
 
 include ../modules/head/head
 include ../modules/footer/footer
+include ../modules/struct/struct
 
 head
-    +head(head.defaults)
-body.page
+    +head(head.dashboard)
+body.rails_admin
+  #loading.label.label-warning(style='display:none; position:fixed; right:20px; bottom:20px; z-index:100000') Loading...
+  .navbar.navbar-fixed-top.navbar-inverse
+    .container-fluid
+      .navbar-header
+        a.pjax.navbar-brand(href='')
+          | ЧГК 
+          small СибАДИ
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      .collapse.navbar-collapse#bs-example-navbar-collapse-1
+        ul.nav.navbar-nav.pull-right
+          li
+            a.pjax(href='') Панель управления
+          li
+            a(href='')
+              span.label.label-important Выход
+          li
+            img(alt='', src='', style='padding-top:5px')
+  .container-fluid
+    //- .row
+    .col-sm-2.col-md-2
+      .well.well-sm
+        ul.nav.nav-pills.nav-stacked
+          each item in items
+            li 
+              a.pjax(href='')= item
 
-    section.page__wrapper
-        
-        //- Include your modules here
-
-        .page__buffer
-
-    .page__footer
-        +footer()
+    .col-sm-10.col-md-10
+      .row
+        .content(data-pjax-container='')
+          title Site administration | Dummy App Admin
+          .page-header
+            h1 Управление сайтом
+          ul.breadcrumb
+            li.active
+              a.pjax(href='') Панель управления
+          ul.nav.nav-tabs
+            li.icon.dashboard_root_link.active(title='', rel='')
+              a.pjax(href='')
+                span.glyphicon.glyphicon-home(aria-hidden='true') 
+                | &nbsp Панель управления
+          table.table.table-condensed.table-striped
+            thead
+              tr
+                th.shrink.model-name Название таблицы
+                th.records Количество записей
+                th.shrink.controls.col-xs-3.col-md-2.col-lg-1
+            tbody
+              each table in tables
+                tr.link(data-link='/admin/ball')
+                  td
+                    span.show
+                      //- a.pjax(href='')
+                      = table
+                  td
+                    .animate-width-to.label.label-default(data-animate-length='20', data-animate-width-to='2%', style='width: 2%;') 0
+                  td.links.col-xs-3.col-md-2.col-lg-1
+                    ul.list-inline
+                      li.icon.index_collection_link(title='Список', rel='tooltip')
+                        a.pjax(href='')
+                          span.glyphicon.glyphicon-th-list
+                          span(style='display:none') List
+                      li.icon.new_collection_link(title='Добавить', rel='tooltip')
+                        a.pjax(href='')
+                          span.glyphicon.glyphicon-plus
+                          span(style='display:none') Add new
+                      li.icon.export_collection_link(title='Экспортировать', rel='tooltip')
+                        a.pjax(href='')
+                          span.glyphicon.glyphicon-share
+                          span(style='display:none') Export
+                      li.icon.history_index_collection_link(title='История', rel='tooltip')
+                        a.pjax(href='')
+                          span.glyphicon.glyphicon-book
+                          span(style='display:none') History
+          //- #block-tables.block
+            .content
+              h2 History
+              table.table.table-condensed.table-striped
+                thead
+                  tr
+                    th.shrink.user User
+                    th.changes Changes
+                tbody
+                  tr
+                    td username@example.com
+                    td created ball #1 
+            footer
+              p © RailsAdmin 2012
