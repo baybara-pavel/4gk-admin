@@ -1,0 +1,63 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/navbar/navbar
+include ../modules/nav/nav
+include ../modules/db/db
+
+
+head
+  +head(head.results)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Первенство')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Результаты
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li
+              a(href='championship.html') Первенство
+            li 
+              a(href='games.html') Сезон 2015. Весна
+            li.active 15.05.2015
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='results.html')
+                span.glyphicon.glyphicon-ok-sign
+                | &nbspТаблица
+            li
+              a(href='import-results.html')
+                span.glyphicon.glyphicon-import
+                | &nbspИмпорт
+          form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
+            table.table.table-condensed.table-striped.table-bordered
+              thead
+                tr
+                  th Название команды
+                  - for (var i = 1; i < 16; ++i) {
+                    th=i
+                  - }
+              tbody
+                each team in teams
+                  tr
+                    td=team.name
+                    - for (var i = 1; i < 16; ++i) {
+                      td
+                        input.toggle(type='checkbox')
+                    - }
+                      
+            .form-group
+              .col-sm-5
+                button.btn.btn-primary(data-disable-with='Save', name='_save', type='submit')
+                  span.glyphicon.glyphicon-ok
+                  |&nbsp Сохранить
+
+          footer
+            +footer

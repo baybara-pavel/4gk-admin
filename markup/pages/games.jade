@@ -12,7 +12,7 @@ include ../modules/db/db
 
 
 head
-  +head(head.championship)
+  +head(head.season)
 body.rails_admin
   +navbar
   .container-fluid
@@ -23,20 +23,22 @@ body.rails_admin
       .row
         .content
           .page-header
-            h1 Управление первенством
+            h1 Сезон 2015. Весна
 
           ol.breadcrumb.panel.panel-default
             li
               a(href='index.html') Панель управления
-            li.active Первенство
+            li
+              a(href='championship.html') Первенство
+            li.active Сезон 2015. Весна
 
           ul.nav.nav-tabs
             li.active
-              a(href='championship.html')
+              a(href='games.html')
                 span.glyphicon.glyphicon-th-list
                 | &nbspСписок
             li
-              a(href='add-season.html')
+              a(href='add-game.html')
                 span.glyphicon.glyphicon-plus
                 | &nbspДобавить
             //- li.export_collection_link(title='', rel='')
@@ -54,28 +56,26 @@ body.rails_admin
                   a(href='#') Удалить выбранные записи
           form#bulk_form.form(accept-charset='UTF-8', action='')
             div(style='margin:0;padding:0;display:inline')
-              input.form-control(name='utf8', type='hidden', value='✓')
-            input#bulk_action.form-control(name='bulk_action', type='hidden')
             table.table.table-condensed.table-striped
               thead
                 tr
-                  th
+                  th.shrink
                     input.toggle(type='checkbox')
-                  th(data-href='#') Id
-                  th Название
-                  th Дата начала
-                  th Дата окончания
+                  th.header.headerSortDown.id_field.integer_type(data-href='#') Id
+                  th Дата игры
+                  th Дата окончания регистрации
+                  th Статус регистрации
                   th 
               tbody
-                each season in seasons
+                each game in games
                   tr
                     td
                       input#bulk_ids_(name='bulk_ids[]', type='checkbox', value='1')
-                    td(title='1')=season.id
+                    td.id_field.integer_type(title='1')=game.id
                     td
-                      a(href='games.html')=season.label
-                    td=season.startDate
-                    td=season.endDate
+                      a(href='results.html')=game.gameDate
+                    td=game.endRegDate
+                    td=game.status
                     td.col-xs-1
                       ul.list-inline
                         li.pull-right(title='Удалить', rel='tooltip')
@@ -84,6 +84,6 @@ body.rails_admin
                         li.pull-right(title='Редактировать', rel='tooltip')
                           a(href='#')
                             span.glyphicon.glyphicon-pencil
-          .clearfix.total-count Всего: #{seasons.length}
+          .clearfix.total-count Всего: #{games.length}
           +footer
 

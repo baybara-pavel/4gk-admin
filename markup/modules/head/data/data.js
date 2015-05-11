@@ -10,5 +10,14 @@ head: {
     },
     championship: {
         title: 'ЧГК | Первенство'
+    },
+    season: {
+        title: 'ЧГК | Сезон 2015. Весна'
+    },
+    games: {
+        title: 'ЧГК | Игра от 15.05.2015'
+    },
+    results: {
+        title: 'ЧГК | Результаты'
     }
 }

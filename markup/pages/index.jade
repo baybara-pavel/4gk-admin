@@ -38,7 +38,7 @@ body.rails_admin
             thead
               tr
                 th.model-name Название таблицы
-                th.records Количество записей
+                th.records Число записей
                 th.controls.col-xs-3.col-md-2.col-lg-1
             tbody
               each table in tables
@@ -48,6 +48,7 @@ body.rails_admin
                       //- a.pjax(href='')
                       = table
                   td
+                    span.badge 0
                   td.links.col-xs-3.col-md-2.col-lg-1
                     ul.list-inline
                       li.icon.index_collection_link(title='Список', rel='tooltip')
@@ -74,5 +75,4 @@ body.rails_admin
                   tr
                     td username@example.com
                     td created ball #1 
-            footer
-              p © RailsAdmin 2012
+          +footer

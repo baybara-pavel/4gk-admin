@@ -1,4 +1,8 @@
 "pages": {
+  news: {
+    name: 'Новости',
+    href: 'news.html'
+  },
   championship: {
     name: 'Первенство',
     href: 'championship.html'

@@ -1,0 +1,82 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/navbar/navbar
+include ../modules/nav/nav
+include ../modules/db/db
+
+
+head
+  +head(head.season)
+body.rails_admin
+  +navbar
+  .container-fluid
+    //- .row
+    +nav('Первенство')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Создание игры
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li
+              a(href='championship.html') Первенство
+            li 
+              a(href='games.html') Сезон 2015. Весна
+            li.active Добавить
+
+          ul.nav.nav-tabs
+            li
+              a(href='games.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+            li.active
+              a(href='add-game.html')
+                span.glyphicon.glyphicon-plus
+                | &nbspДобавить
+          form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
+            .form-group
+              label.control-label.col-sm-2(for='') Дата игры
+              .col-sm-2
+                input.form-control(name='', type='date', value='')
+                .help-block Обязательное
+            .form-group
+              label.control-label.col-sm-2(for='') Дата закрытия регистрации
+              .col-sm-2
+                input.form-control(name='', type='date', value='')
+                .help-block&nbsp
+            .form-group
+              label.control-label.col-sm-2(for='') Статус регистрации
+              .col-sm-2
+                select.form-control(name='')
+                  option не анонсирована
+                  option открыта
+                  option закрыта
+                .help-block&nbsp
+            .form-group
+              .col-sm-offset-2.col-sm-5
+                button.btn.btn-primary(data-disable-with='Save', name='_save', type='submit')
+                  span.glyphicon.glyphicon-ok
+                  |&nbsp Сохранить
+                  //- span.extra_buttons
+                  //- button.btn.btn-info(data-disable-with='Save and add another', name='_add_another', type='submit')
+                  //-   | Save and add another
+                  //- button.btn.btn-info(data-disable-with='Save and edit', name='_add_edit', type='submit')
+                  //-   | Save and edit
+                button.btn.btn-default(data-disable-with='Cancel', name='_continue', type='submit')
+                  span.glyphicon.glyphicon-remove
+                  |&nbsp Отмена
+
+
+          footer
+            +footer
+              //- p © RailsAdmin 2012

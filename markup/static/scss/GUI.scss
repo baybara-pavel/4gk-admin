@@ -4,6 +4,27 @@
 body {
   padding-top: 60px;
 }
+.navbar-right {
+  margin-right: 0;
+}
 .nav.nav-tabs {
   margin-bottom: 15px;
+}
+.form-horizontal {
+  padding-top: 15px;
+}
+.help-block {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.footer{
+  margin-top: 25px;
+}
+
+.navbar-nav {
+  li { 
+    a.btn-logout {
+      padding: 0;
+    }
+  }
 }
