@@ -1,0 +1,8 @@
+mixin nav(activeItem)
+  .col-sm-2.col-md-2
+    .well.well-sm
+      ul.nav.nav-pills.nav-stacked
+        each page in pages
+          - var activeClass = (activeItem === page.name ? 'active' : '')
+            li(class = activeClass)
+              a(href='#{page.href}')= page.name

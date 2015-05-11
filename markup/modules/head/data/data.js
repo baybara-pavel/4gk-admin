@@ -7,5 +7,8 @@ head: {
     },
     dashboard: {
         title: 'ЧГК | Панель управления'
+    },
+    championship: {
+        title: 'ЧГК | Первенство'
     }
 }

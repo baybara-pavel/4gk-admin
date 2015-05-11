@@ -227,7 +227,7 @@ gulp.task('browsersync', function (cb) {
         browser: browserSyncConfig.browser,
         startPath: browserSyncConfig.startUrl,
         notify: browserSyncConfig.useNotifyInBrowser,
-        tunnel: useTunnelToWeb
+        tunnel: useTunnelToWeb,
     });
 
     cb(null);
