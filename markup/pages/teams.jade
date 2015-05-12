@@ -2,71 +2,66 @@ include ../modules/includies/includies
 +includies
 
 head
-  +head(head.season)
+  +head(head.teams)
 body.rails_admin
   +navbar
   .container-fluid
-    +nav('Первенство')
+    +nav('Команды')
 
     .col-sm-10.col-md-10
       .row
         .content
           .page-header
-            h1 Сезон 2015. Весна
+            h1 Управление командами
 
           ol.breadcrumb.panel.panel-default
             li
               a(href='index.html') Панель управления
-            li
-              a(href='championship.html') Первенство
-            li.active Сезон 2015. Весна
+            li.active Команды
 
           ul.nav.nav-tabs
             li.active
-              a(href='games.html')
+              a(href='teams.html')
                 span.glyphicon.glyphicon-th-list
                 | &nbspСписок
-            li
-              a(href='add-game.html')
-                span.glyphicon.glyphicon-plus
-                | &nbspДобавить
             li.dropdown(style='float:right')
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 | Выбранные элементы
                 span.caret
               ul.dropdown-menu(role='menu')
+                li
                   a(href='#') Удалить выбранные записи
-
           form.form(accept-charset='UTF-8', action='')
             div(style='margin:0;padding:0;display:inline')
             table.table.table-condensed.table-striped
               thead
                 tr
-                  th.shrink
+                  th
                     input.toggle(type='checkbox')
-                  th.header.headerSortDown.id_field.integer_type(data-href='#') Id
-                  th Дата игры
-                  th Дата окончания регистрации
-                  th Статус регистрации
+                  th Id
+                  th Название
+                  th Email
+                  th Дата регистрации
                   th 
               tbody
-                each game in games
+                each team in teams
                   tr
                     td
-                      input(name='bulk_ids[]', type='checkbox', value='1')
-                    td.id_field.integer_type(title='1')=game.id
+                      input(name='', type='checkbox', value='1')
+                    td=team.id
                     td
-                      a(href='results.html')=game.gameDate
-                    td=game.endRegDate
-                    td=game.status
+                      a(href='edit-team.html')=team.name
+                    td=team.email
+                    td=team.regDate
                     td.col-xs-1
                       ul.list-inline
                         li.pull-right(title='Удалить', rel='tooltip')
                           a(href='#')
                             span.glyphicon.glyphicon-trash
                         li.pull-right(title='Редактировать', rel='tooltip')
-                          a(href='#')
+                          a(href='edit-team.html')
                             span.glyphicon.glyphicon-pencil
-          .clearfix.total-count Всего: #{games.length}
+          .clearfix.total-count Всего: #{teams.length}
           +footer
 
+ 

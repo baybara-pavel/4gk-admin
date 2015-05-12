@@ -4,5 +4,10 @@ mixin nav(activeItem)
       ul.nav.nav-pills.nav-stacked
         each page in pages
           - var activeClass = (activeItem === page.name ? 'active' : '')
-            li(class = activeClass)
-              a(href='#{page.href}')= page.name
+            if page.name === 'Заявки'
+              li(class = activeClass)
+                a(href='#{page.href}')= page.name 
+                  span.badge.pull-right 0
+            else
+              li(class = activeClass)
+                a(href='#{page.href}')= page.name

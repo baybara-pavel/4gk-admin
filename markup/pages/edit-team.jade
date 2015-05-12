@@ -2,56 +2,47 @@ include ../modules/includies/includies
 +includies
 
 head
-  +head(head.championship)
+  +head(head.teams)
 body.rails_admin
   +navbar
   .container-fluid
-    +nav('Первенство')
+    +nav('Команды')
 
     .col-sm-10.col-md-10
       .row
         .content
           .page-header
-            h1 Создание сезона
+            h1 Редактирование команды "Матрац с ЭП"
 
           ol.breadcrumb.panel.panel-default
             li
               a(href='index.html') Панель управления
             li
-              a(href='championship.html') Первенство
-            li.active Добавить
+              a(href='teams.html') Команды
+            li.active Редактирование
 
           ul.nav.nav-tabs
             li
-              a(href='championship.html')
+              a(href='teams.html')
                 span.glyphicon.glyphicon-th-list
                 | &nbspСписок
             li.active
-              a(href='add-season.html')
-                span.glyphicon.glyphicon-plus
-                | &nbspДобавить
-
+              a(href='teams.html')
+                span.glyphicon.glyphicon-edit
+                | &nbspРедактирование
+          
           form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
             .form-group
-              label.control-label.col-sm-1(for='user_email') Название
-              .col-sm-5
-                input.form-control(maxlength='255', name='', size='50', type='text', value='')
+              label.control-label.col-sm-1(for='') Название
+              .col-sm-3
+                input.form-control(name='', type='text', value='Матрац с ЭП')
                 .help-block Обязательное. Длинна не больше 255 символов
-            .form-group
-              label.control-label.col-sm-1(for='user_email') Дата открытия
-              .col-sm-2
-                input.form-control(name='', type='date', value='')
-                .help-block Обязательное
-            .form-group
-              label.control-label.col-sm-1(for='user_email') Дата закрытия
-              .col-sm-2
-                input.form-control(name='', type='date', value='')
-                .help-block&nbsp
             .form-group
               .col-sm-offset-1.col-sm-5
                 button.btn.btn-primary(data-disable-with='Save', name='_save', type='submit')
                   span.glyphicon.glyphicon-ok
                   |&nbsp Сохранить
+                button.btn.btn-default(data-disable-with='Cancel', name='_continue', type='submit')
                   span.glyphicon.glyphicon-remove
                   |&nbsp Отмена
 

@@ -1,0 +1,70 @@
+include ../modules/includies/includies
++includies
+
+head
+  +head(head.entry)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Заявки')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Управление заявками
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li.active Заявки
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='games.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+            li.dropdown(style='float:right')
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                | Выбранные элементы
+                span.caret
+              ul.dropdown-menu(role='menu')
+                  a(href='#') Удалить выбранные записи
+          table.table.table-condensed.table-striped
+            thead
+              tr
+                th
+                  input.toggle(type='checkbox')
+                th Заявки на игру от
+                th Сезон
+                th Дата окончания регистрации
+                th Статус регистрации
+                th Всего заявок
+                th Новых заявок
+                th 
+            tbody
+              each game in games
+                tr
+                  td
+                    input(name='', type='checkbox', value='1')
+                  td
+                    a(href='game-entries.html')=game.gameDate
+                  td Сезон 2015. Весна
+                  td=game.endRegDate
+                  td=game.status
+                  td 
+                    span.label.label-default 2
+                  td 
+                    span.label.label-success 0
+                  td.col-xs-1
+                    ul.list-inline
+                      li.pull-right(title='Удалить', rel='tooltip')
+                        a(href='#')
+                          span.glyphicon.glyphicon-trash
+                      li.pull-right(title='Экспортировать', rel='tooltip')
+                        a(href='#')
+                          span.glyphicon.glyphicon-share
+        .clearfix.total-count Всего: #{games.length}
+          
+          +footer
+

@@ -9,7 +9,7 @@
   },
   entry_forms: {
     name: 'Заявки',
-    href: 'entry.html'
+    href: 'entries-list.html'
   },
   teams: {
     name: 'Команды',

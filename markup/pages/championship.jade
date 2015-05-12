@@ -1,22 +1,11 @@
-doctype html
-|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
-|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
-|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
-|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
-
-include ../modules/head/head
-include ../modules/footer/footer
-include ../modules/navbar/navbar
-include ../modules/nav/nav
-include ../modules/db/db
-
+include ../modules/includies/includies
++includies
 
 head
   +head(head.championship)
 body.rails_admin
   +navbar
   .container-fluid
-    //- .row
     +nav('Первенство')
 
     .col-sm-10.col-md-10
@@ -39,23 +28,17 @@ body.rails_admin
               a(href='add-season.html')
                 span.glyphicon.glyphicon-plus
                 | &nbspДобавить
-            //- li.export_collection_link(title='', rel='')
-            //-   a(href='#')
-            //-     span.glyphicon.glyphicon-share
-            //-     | &nbspЭкспорт
             li.dropdown(style='float:right')
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 | Выбранные элементы
                 span.caret
               ul.dropdown-menu(role='menu')
-                //- li
-                //-   a(href='#') Экспортировать выбранные записи
-                li
-                  a(href='#') Удалить выбранные записи
-          form#bulk_form.form(accept-charset='UTF-8', action='')
+                a(href='#') Удалить выбранные записи
+
+          form.form(accept-charset='UTF-8', action='')
             div(style='margin:0;padding:0;display:inline')
               input.form-control(name='utf8', type='hidden', value='✓')
-            input#bulk_action.form-control(name='bulk_action', type='hidden')
+            input.form-control(name='bulk_action', type='hidden')
             table.table.table-condensed.table-striped
               thead
                 tr
@@ -70,7 +53,7 @@ body.rails_admin
                 each season in seasons
                   tr
                     td
-                      input#bulk_ids_(name='bulk_ids[]', type='checkbox', value='1')
+                      input(name='bulk_ids[]', type='checkbox', value='1')
                     td(title='1')=season.id
                     td
                       a(href='games.html')=season.label

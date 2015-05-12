@@ -1,16 +1,11 @@
-include ../modules/head/head
-include ../modules/footer/footer
-include ../modules/navbar/navbar
-include ../modules/nav/nav
-include ../modules/db/db
-
+include ../modules/includies/includies
++includies
 
 head
   +head(head.results)
 body.rails_admin
   +navbar
   .container-fluid
-    //- .row
     +nav('Первенство')
 
     .col-sm-10.col-md-10
@@ -39,6 +34,7 @@ body.rails_admin
               a(href='import-results.html')
                 span.glyphicon.glyphicon-import
                 | &nbspИмпорт
+
           form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
             .form-group
               label.control-label.col-sm-2(for='') Файл с результатами
@@ -51,16 +47,8 @@ body.rails_admin
                 button.btn.btn-primary(data-disable-with='Save', name='_save', type='submit')
                   span.glyphicon.glyphicon-ok
                   |&nbsp Сохранить
-                  //- span.extra_buttons
-                  //- button.btn.btn-info(data-disable-with='Save and add another', name='_add_another', type='submit')
-                  //-   | Save and add another
-                  //- button.btn.btn-info(data-disable-with='Save and edit', name='_add_edit', type='submit')
-                  //-   | Save and edit
                 button.btn.btn-default(data-disable-with='Cancel', name='_continue', type='submit')
                   span.glyphicon.glyphicon-remove
                   |&nbsp Отмена
 
-
-          footer
-            +footer
-              //- p © RailsAdmin 2012
+          +footer

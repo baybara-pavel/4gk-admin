@@ -1,20 +1,11 @@
-doctype html
-|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
-|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
-|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
-|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
-
-include ../modules/head/head
-include ../modules/footer/footer
-include ../modules/navbar/navbar
-include ../modules/nav/nav
+include ../modules/includies/includies
++includies
 
 head
   +head(head.dashboard)
 body.rails_admin
   +navbar
   .container-fluid
-    //- .row
     +nav()
 
     .col-sm-10.col-md-10
@@ -33,36 +24,34 @@ body.rails_admin
                 span.glyphicon.glyphicon-home(aria-hidden='true') 
                 | &nbsp Панель управления
 
-          -var tables = ['Сезоны','Команды','Игроки','Фото','Видео','Вопросы']
+          -var tables = ['Команды','Игроки','Новости','Сезоны','Фото','Видео','Вопросы']
           table.table.table-condensed.table-striped.table-hover
             thead
               tr
                 th.model-name Название таблицы
                 th.records Число записей
+                th.records Последние изменения
+                th.records Автор изменений
                 th.controls.col-xs-3.col-md-2.col-lg-1
             tbody
               each table in tables
                 tr
                   td
                     span.show
-                      //- a.pjax(href='')
                       = table
                   td
                     span.badge 0
+                  td 11.05.2015 13:45:20
+                  td admin#1
                   td.links.col-xs-3.col-md-2.col-lg-1
                     ul.list-inline
-                      li.icon.index_collection_link(title='Список', rel='tooltip')
+                      li(title='Список', rel='tooltip')
                           a.pjax(href='#')
                             span.glyphicon.glyphicon-th-list
-                      li.icon.new_collection_link(title='Добавить', rel='tooltip')
-                          a.pjax(href='#')
-                            span.glyphicon.glyphicon-plus
-                      li.icon.export_collection_link(title='Экспортировать', rel='tooltip')
-                          a.pjax(href='#')
-                            span.glyphicon.glyphicon-share
-                      li.icon.history_index_collection_link(title='История', rel='tooltip')
-                          a.pjax(href='#')
-                            span.glyphicon.glyphicon-book
+                      if table !== 'Команды'
+                        li(title='Добавить', rel='tooltip')
+                            a.pjax(href='#')
+                              span.glyphicon.glyphicon-plus
           //- #block-tables.block
             .content
               h2 History

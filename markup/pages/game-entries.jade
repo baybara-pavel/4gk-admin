@@ -1,0 +1,71 @@
+include ../modules/includies/includies
++includies
+
+head
+  +head(head.entry)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Заявки')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Заявки на игру от 15.05.2015
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li
+             a(href='entries-list.html')
+              | Заявки
+            li.active Игра от 15.05.2015 
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='games.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+            li.dropdown(style='float:right')
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                | Выбранные элементы
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='#') Удалить выбранные записи
+
+          table.table.table-condensed.table-striped
+            thead
+              tr
+                th
+                  input.toggle(type='checkbox')
+                th Id
+                th Команда
+                th Дата подачи
+                th Статус
+                th 
+            tbody
+              each entry in entry_forms
+                tr
+                  td
+                    input(name='', type='checkbox', value='1')
+                  td
+                    a(href='team-entry.html')=entry.id 
+                  td=entry.team
+                  td=entry.regDate
+                  td=entry.status
+                  td.col-xs-1
+                    ul.list-inline
+                      if entry.status === 'отклонена'
+                        li.pull-right(title='Одобрить', rel='tooltip')
+                          a(href='#')
+                            span.glyphicon.glyphicon-ok
+                      else
+                        li.pull-right(title='Отклонить', rel='tooltip')
+                          a(href='#')
+                            span.glyphicon.glyphicon-remove
+        .clearfix.total-count Всего: #{entry_forms.length}
+
+        +footer
+

@@ -1,0 +1,54 @@
+include ../modules/includies/includies
++includies
+
+head
+  +head(head.entry)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Заявки')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Заявка команды "Матрац с ЭП"
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li
+              a(href='entries-list.html') Заявки
+            li
+              a(href='game-entries.html') Игра от 15.05.2015 
+            li.active Матрац с ЭП 
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='games.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+          table.table.table-condensed.table-striped
+            thead
+              tr
+                th
+                th Фамилия
+                th Имя
+                th Отчество
+                th Факультет
+                th Группа
+            tbody
+              each player in players
+                tr
+                  td.text-center
+                    if player.captian === 'true' 
+                      span.glyphicon.glyphicon-certificate.text-primary.
+                  td=player.surname
+                  td=player.name
+                  td=player.patronymic
+                  td=player.department
+                  td=player.group
+        .clearfix.total-count Всего: #{players.length}
+          
+          +footer
+

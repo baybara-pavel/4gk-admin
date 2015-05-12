@@ -2,24 +2,22 @@ include ../modules/includies/includies
 +includies
 
 head
-  +head(head.season)
+  +head(head.news)
 body.rails_admin
   +navbar
   .container-fluid
-    +nav('Первенство')
+    +nav('Новости')
 
     .col-sm-10.col-md-10
       .row
         .content
           .page-header
-            h1 Сезон 2015. Весна
+            h1 Управление новостями
 
           ol.breadcrumb.panel.panel-default
             li
               a(href='index.html') Панель управления
-            li
-              a(href='championship.html') Первенство
-            li.active Сезон 2015. Весна
+            li.active Новости
 
           ul.nav.nav-tabs
             li.active
@@ -27,7 +25,7 @@ body.rails_admin
                 span.glyphicon.glyphicon-th-list
                 | &nbspСписок
             li
-              a(href='add-game.html')
+              a(href='add-news-item.html')
                 span.glyphicon.glyphicon-plus
                 | &nbspДобавить
             li.dropdown(style='float:right')
@@ -35,6 +33,7 @@ body.rails_admin
                 | Выбранные элементы
                 span.caret
               ul.dropdown-menu(role='menu')
+                li
                   a(href='#') Удалить выбранные записи
 
           form.form(accept-charset='UTF-8', action='')
@@ -45,20 +44,22 @@ body.rails_admin
                   th.shrink
                     input.toggle(type='checkbox')
                   th.header.headerSortDown.id_field.integer_type(data-href='#') Id
-                  th Дата игры
-                  th Дата окончания регистрации
-                  th Статус регистрации
+                  th Заголовок
+                  th Дата
+                  th Игра
+                  th Статус
                   th 
               tbody
-                each game in games
+                each item in news
                   tr
                     td
-                      input(name='bulk_ids[]', type='checkbox', value='1')
-                    td.id_field.integer_type(title='1')=game.id
+                      input(name='', type='checkbox', value='1')
+                    td=item.id
                     td
-                      a(href='results.html')=game.gameDate
-                    td=game.endRegDate
-                    td=game.status
+                      a(href='add-news-item.html')=item.header
+                    td=item.date
+                    td=item.game
+                    td=item.status
                     td.col-xs-1
                       ul.list-inline
                         li.pull-right(title='Удалить', rel='tooltip')
@@ -67,6 +68,14 @@ body.rails_admin
                         li.pull-right(title='Редактировать', rel='tooltip')
                           a(href='#')
                             span.glyphicon.glyphicon-pencil
-          .clearfix.total-count Всего: #{games.length}
+                        if item.status === 'опубликована'
+                          li.pull-right(title='Скрыть', rel='tooltip')
+                            a(href='#')
+                              span.glyphicon.glyphicon-stop
+                        else
+                           li.pull-right(title='Опубликовать', rel='tooltip')
+                            a(href='#')
+                              span.glyphicon.glyphicon-play
+          .clearfix.total-count Всего: #{news.length}
           +footer
 

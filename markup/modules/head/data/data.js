@@ -19,5 +19,14 @@ head: {
     },
     results: {
         title: 'ЧГК | Результаты'
+    },
+    entry: {
+        title: 'ЧГК | Заявки'
+    },
+    news: {
+        title: 'ЧГК | Новости'
+    },
+    teams: {
+        title: 'ЧГК | Команды'
     }
 }
