@@ -1,0 +1,66 @@
+include ../modules/includies/includies
++includies
+
+head
+  +head(head.players)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Игроки')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Управление игроками
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li.active Игроки
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='players.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+            li
+              a(href='add-player.html')
+                span.glyphicon.glyphicon-plus
+                | &nbspДобавить
+          table.table.table-condensed.table-striped
+            thead
+              tr
+                th 
+                  input(type='checkbox')
+                th Id
+                th Фамилия
+                th Имя
+                th Отчество
+                th Факультет
+                th Группа
+                th 
+            tbody
+              each player in players
+                tr
+                  td
+                    input(type='checkbox')
+                  td=player.id
+                  td=player.surname
+                  td=player.name
+                  td=player.patronymic
+                  td=player.department
+                  td=player.group
+                  td.col-xs-1
+                      ul.list-inline
+                        li.pull-right(title='Удалить', rel='tooltip')
+                          a(href='#')
+                            span.glyphicon.glyphicon-trash
+                        li.pull-right(title='Редактировать', rel='tooltip')
+                          a(href='edit-team.html')
+                            span.glyphicon.glyphicon-pencil
+
+        .clearfix.total-count Всего: #{players.length}
+          
+          +footer
+

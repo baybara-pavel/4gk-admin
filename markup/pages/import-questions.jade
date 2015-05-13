@@ -2,42 +2,43 @@ include ../modules/includies/includies
 +includies
 
 head
-  +head(head.results)
+  +head(head.question)
 body.rails_admin
   +navbar
   .container-fluid
-    +nav('Первенство')
+    +nav('Вопросы')
 
     .col-sm-10.col-md-10
       .row
         .content
           .page-header
-            h1 Импорт результатов
+            h1 Импорт вопросов
 
           ol.breadcrumb.panel.panel-default
             li
               a(href='index.html') Панель управления
             li
-              a(href='championship.html') Первенство
+              a(href='questions-list.html') Вопросы
             li 
-              a(href='games.html') Сезон 2015. Весна
-            li
-              a(href='results.html') 15.05.2015
+              aa(href='game-questions.html') Вопросы к игре от 15.05.2015
             li.active Импорт
 
           ul.nav.nav-tabs
             li
-              a(href='results.html')
-                span.glyphicon.glyphicon-ok-sign
-                | &nbspТаблица
+              a(href='game-questions.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+            li
+              a(href='add-question.html')
+                span.glyphicon.glyphicon-plus
+                | &nbspДобавить
             li.active
-              a(href='import-results.html')
+              a(href='import-questions.html')
                 span.glyphicon.glyphicon-import
                 | &nbspИмпорт
-
           form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
             .form-group
-              label.control-label.col-sm-2(for='') Файл с результатами
+              label.control-label.col-sm-2(for='') Файл с вопросами
               .col-sm-2
                 input.form-control(name='', type='file', value='')
                 .help-block Выберите файл формата .CSV

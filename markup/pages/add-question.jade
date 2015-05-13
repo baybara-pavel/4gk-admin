@@ -2,67 +2,69 @@ include ../modules/includies/includies
 +includies
 
 head
-  +head(head.news)
+  +head(head.question)
 body.rails_admin
   +navbar
   .container-fluid
-    +nav('Новости')
+    +nav('Вопросы')
 
     .col-sm-10.col-md-10
       .row
         .content
           .page-header
-            h1 Создание новости
+            h1 Импорт вопросов
 
           ol.breadcrumb.panel.panel-default
             li
               a(href='index.html') Панель управления
             li
-              a(href='news.html') Новости
-            li.active Добавить
+              a(href='questions-list.html') Вопросы
+            li 
+              a(href='game-questions.html') Вопросы к игре от 15.05.2015
+            li.active Импорт
 
           ul.nav.nav-tabs
             li
-              a(href='news.html')
+              a(href='game-questions.html')
                 span.glyphicon.glyphicon-th-list
                 | &nbspСписок
             li.active
-              a(href='add-news-item.html')
+              a(href='add-question.html')
                 span.glyphicon.glyphicon-plus
                 | &nbspДобавить
+            li
+              a(href='import-questions.html')
+                span.glyphicon.glyphicon-import
+                | &nbspИмпорт
 
           form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
             .form-group
-              label.control-label.col-sm-1(for='') Заголовок
-              .col-sm-3
-                input.form-control(name='', type='text', value='')
-                .help-block Обязательное. Длинна не больше 255 символов
+              label.control-label.col-sm-2(for='') Номер вопроса в пакете
+              .col-sm-1
+                input.form-control(name='', type='number', value='')
+                .help-block Обязательное
             .form-group
-              label.control-label.col-sm-1(for='') Текст
+              label.control-label.col-sm-2(for='') Текст
               .col-sm-3
                 textarea.form-control(name='', rows='5', value='')
                 .help-block Обязательное
             .form-group
-              label.control-label.col-sm-1(for='') Игра
+              label.control-label.col-sm-2(for='') Ответ
               .col-sm-3
-                select.form-control(name='')
-                  option 15.05.2015
-                  option ...
-                  option ...
-                .help-block&nbsp
+                input.form-control(name='', type='text', value='')
+                .help-block Обязательное. Длинна не больше 255 символов
             .form-group
-              label.control-label.col-sm-1(for='') Статус
+              label.control-label.col-sm-2(for='') Доп.материалы
               .col-sm-3
-                select.form-control(name='')
-                  option опубликована
-                  option скрыта
-                .help-block&nbsp
+                input.form-control(name='', type='text', value='')
+                .help-block Ссылка на изображение или видео
             .form-group
-              .col-sm-offset-1.col-sm-5
+              .col-sm-offset-2.col-sm-5
                 button.btn.btn-primary(data-disable-with='Save', name='_save', type='submit')
                   span.glyphicon.glyphicon-ok
                   |&nbsp Сохранить
                 button.btn.btn-default(data-disable-with='Cancel', name='_continue', type='submit')
                   span.glyphicon.glyphicon-remove
                   |&nbsp Отмена
+
           +footer

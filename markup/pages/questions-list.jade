@@ -1,0 +1,48 @@
+include ../modules/includies/includies
++includies
+
+head
+  +head(head.question)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Вопросы')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Управление вопросами
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li.active Вопросы
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='questions-list.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+          table.table.table-condensed.table-striped
+            thead
+              tr
+                th
+                  input.toggle(type='checkbox')
+                th Вопросы к игре от
+                th Сезон
+                th Всего вопросов
+            tbody
+              each game in games
+                tr
+                  td
+                    input(name='', type='checkbox', value='1')
+                  td
+                    a(href='game-questions.html')=game.gameDate
+                  td Сезон 2015. Весна
+                  td
+                    span.label.label-default 15
+        .clearfix.total-count Всего: #{games.length}
+          
+          +footer
+

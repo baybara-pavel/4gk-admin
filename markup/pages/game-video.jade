@@ -1,0 +1,60 @@
+include ../modules/includies/includies
++includies
+
+head
+  +head(head.video)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Видеозаписи')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Видеозаписи к игре 15.05.2015
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li
+              a(href='video.html') Видеозаписи
+            li.active Видеозаписи к игре от 15.05.2015
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='game-video.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+            li
+              a(href='add-video.html')
+                span.glyphicon.glyphicon-plus
+                | &nbspДобавить
+          form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
+            table.table.table-condensed.table-striped
+              thead
+                tr
+                  th 
+                    input(type='checkbox')
+                  th Id
+                  th Сcылка
+                  th 
+              tbody
+                each video in videos
+                  tr
+                    td
+                      input(type='checkbox')
+                    td=video.id
+                    td
+                      a=video.link
+                    td.col-xs-1
+                      ul.list-inline
+                        li.pull-right(title='Удалить', rel='tooltip')
+                          a(href='#')
+                            span.glyphicon.glyphicon-trash
+                        li.pull-right(title='Редактировать', rel='tooltip')
+                          a(href='edit-team.html')
+                            span.glyphicon.glyphicon-pencil
+            .clearfix.total-count Всего: #{questions.length}
+
+          +footer

@@ -2,48 +2,44 @@ include ../modules/includies/includies
 +includies
 
 head
-  +head(head.results)
+  +head(head.photo)
 body.rails_admin
   +navbar
   .container-fluid
-    +nav('Первенство')
+    +nav('Фотографии')
 
     .col-sm-10.col-md-10
       .row
         .content
           .page-header
-            h1 Импорт результатов
+            h1 Создание фотоальбома
 
           ol.breadcrumb.panel.panel-default
             li
               a(href='index.html') Панель управления
             li
-              a(href='championship.html') Первенство
-            li 
-              a(href='games.html') Сезон 2015. Весна
+              a(href='photo.html') Фотоальбомы
             li
-              a(href='results.html') 15.05.2015
-            li.active Импорт
+              a(href='game-photo.html') Фотоальбомы к игре от 15.05.2015
+            li.active Добавить
 
           ul.nav.nav-tabs
             li
-              a(href='results.html')
-                span.glyphicon.glyphicon-ok-sign
-                | &nbspТаблица
+              a(href='game-photo.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
             li.active
-              a(href='import-results.html')
-                span.glyphicon.glyphicon-import
-                | &nbspИмпорт
-
+              a(href='add-photo.html')
+                span.glyphicon.glyphicon-plus
+                | &nbspДобавить
           form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
             .form-group
-              label.control-label.col-sm-2(for='') Файл с результатами
-              .col-sm-2
-                input.form-control(name='', type='file', value='')
-                .help-block Выберите файл формата .CSV
-            
+              label.control-label.col-sm-1(for='') Ссылка
+              .col-sm-3
+                input.form-control(name='', type='text', value='', placeholder='http://')
+                .help-block Обязательное
             .form-group
-              .col-sm-offset-2.col-sm-5
+              .col-sm-offset-1.col-sm-5
                 button.btn.btn-primary(data-disable-with='Save', name='_save', type='submit')
                   span.glyphicon.glyphicon-ok
                   |&nbsp Сохранить

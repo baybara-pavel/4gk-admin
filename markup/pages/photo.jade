@@ -1,0 +1,48 @@
+include ../modules/includies/includies
++includies
+
+head
+  +head(head.photo)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Фотографии')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Управление фотоальбомами
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li.active Фотоальбомы
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='photo.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+          table.table.table-condensed.table-striped
+            thead
+              tr
+                th
+                  input.toggle(type='checkbox')
+                th Фотоальбомы к игре от
+                th Сезон
+                th Всего фотоальбомов
+            tbody
+              each game in games
+                tr
+                  td
+                    input(name='', type='checkbox', value='1')
+                  td
+                    a(href='game-photo.html')=game.gameDate
+                  td Сезон 2015. Весна
+                  td
+                    span.label.label-default 1
+        .clearfix.total-count Всего: #{games.length}
+          
+          +footer
+

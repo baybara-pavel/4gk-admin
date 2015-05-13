@@ -1,0 +1,48 @@
+include ../modules/includies/includies
++includies
+
+head
+  +head(head.video)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Видеозаписи')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Управление Видеозаписями
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li.active Видеозаписи
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='video.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+          table.table.table-condensed.table-striped
+            thead
+              tr
+                th
+                  input.toggle(type='checkbox')
+                th Видеозаписи к игре от
+                th Сезон
+                th Всего видеозаписей
+            tbody
+              each game in games
+                tr
+                  td
+                    input(name='', type='checkbox', value='1')
+                  td
+                    a(href='game-video.html')=game.gameDate
+                  td Сезон 2015. Весна
+                  td
+                    span.label.label-default 1
+        .clearfix.total-count Всего: #{games.length}
+          
+          +footer
+

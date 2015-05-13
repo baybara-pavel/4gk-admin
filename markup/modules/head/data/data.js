@@ -28,5 +28,17 @@ head: {
     },
     teams: {
         title: 'ЧГК | Команды'
+    },
+    question: {
+        title: 'ЧГК | Вопросы'
+    },
+    players: {
+        title: 'ЧГК | Игроки'
+    },
+    photo: {
+        title: 'ЧГК | Игроки'
+    },
+    video: {
+        title: 'ЧГК | Видео'
     }
 }

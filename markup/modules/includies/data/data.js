@@ -156,4 +156,120 @@
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores enim dolor ab ipsam, vero quas soluta! Ipsam exercitationem quo illo dolorum dolor sapiente vel ipsa. Dolorum nulla fugiat quaerat, unde! Repudiandae perspiciatis, recusandae reiciendis voluptates dolore blanditiis deleniti quas ab laborum veritatis tenetur minima aliquam. Deserunt laborum esse blanditiis ullam consectetur autem maxime expedita. Blanditiis iusto tenetur, consectetur fuga exercitationem non recusandae. Qui nisi accusamus, sunt enim incidunt ratione? Dignissimos illo nesciunt, odit porro cupiditate fugiat ipsam impedit possimus accusamus ab libero earum vel, voluptatem, doloremque voluptate esse. Quaerat tempore nihil consequatur voluptatibus ipsum, numquam illo. Optio, aspernatur at maxime! Distinctio eos tempora totam architecto at, libero optio expedita, voluptates aut sed quae alias debitis. Facilis recusandae, itaque. Facere obcaecati ad quis deserunt corrupti sequi fugiat atque eveniet. Aliquid, natus, quasi. Sint aliquid expedita atque asperiores iste adipisci tempore commodi, ex vero nihil beatae sequi nulla, natus voluptatibus. Deserunt quibusdam asperiores maiores, possimus. Molestias amet veniam, quaerat, error, repudiandae, sit quibusdam cupiditate quidem harum sed voluptatibus. Provident aliquam ratione repellendus eveniet, laboriosam quae reiciendis sed sunt. Minima impedit ipsum est. Maiores accusantium sed officiis voluptatibus facere temporibus harum voluptate aperiam architecto molestias voluptatem quod nesciunt iste placeat, quaerat molestiae cumque perspiciatis dolorum saepe dignissimos odit at pariatur. Cum inventore delectus similique ipsa numquam quidem, consequuntur, dolorum possimus dolore ullam unde.',
     status: 'скрыта'
   }
+],
+
+"questions": [
+  {
+    id: '15',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '14',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '13',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '12',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '11',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '10',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '9',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '8',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '7',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '6',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '5',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '4',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '3',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '2',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+  {
+    id: '1',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
+    link:'-',
+    answer: 'Lorem ipsum.'
+  },
+
+],
+
+"photos": [
+  {
+    id: "2",
+    link: "http:sample.org/img/jdfoirjo"
+  },
+  {
+    id: "1",
+    link: "http:sample.org/img/jdfoirjo"
+  },
+],
+
+"videos": [
+  {
+    id: "2",
+    link: "http:sample.org/img/jdfoirjo"
+  },
+  {
+    id: "1",
+    link: "http:sample.org/img/jdfoirjo"
+  },
 ]

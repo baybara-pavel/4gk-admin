@@ -21,7 +21,7 @@
   },
   photo: {
     name: 'Фото',
-    href: 'photo.thml'
+    href: 'photo.html'
   },
   video: {
     name: 'Видео',
@@ -29,6 +29,6 @@
   },
   question: {
     name: 'Вопросы',
-    href: 'question.html'
+    href: 'questions-list.html'
   }
 }

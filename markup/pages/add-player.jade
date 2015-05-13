@@ -2,61 +2,67 @@ include ../modules/includies/includies
 +includies
 
 head
-  +head(head.news)
+  +head(head.players)
 body.rails_admin
   +navbar
   .container-fluid
-    +nav('Новости')
+    +nav('Игроки')
 
     .col-sm-10.col-md-10
       .row
         .content
           .page-header
-            h1 Создание новости
+            h1 Создание игрока
 
           ol.breadcrumb.panel.panel-default
             li
               a(href='index.html') Панель управления
             li
-              a(href='news.html') Новости
+              a(href='players.html') Игроки
             li.active Добавить
 
           ul.nav.nav-tabs
             li
-              a(href='news.html')
+              a(href='players.html')
                 span.glyphicon.glyphicon-th-list
                 | &nbspСписок
             li.active
-              a(href='add-news-item.html')
+              a(href='add-player.html')
                 span.glyphicon.glyphicon-plus
                 | &nbspДобавить
 
           form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
             .form-group
-              label.control-label.col-sm-1(for='') Заголовок
+              label.control-label.col-sm-1(for='') Фамилия
               .col-sm-3
                 input.form-control(name='', type='text', value='')
                 .help-block Обязательное. Длинна не больше 255 символов
             .form-group
-              label.control-label.col-sm-1(for='') Текст
+              label.control-label.col-sm-1(for='') Имя
               .col-sm-3
-                textarea.form-control(name='', rows='5', value='')
+                input.form-control(name='', value='')
+                .help-block Обязательное. Длинна не больше 255 символов
+            .form-group
+              label.control-label.col-sm-1(for='') Отчество
+              .col-sm-3
+                input.form-control(name='',  value='')
+                .help-block Обязательное. Длинна не больше 255 символов
+            .form-group
+              label.control-label.col-sm-1(for='') Факультет
+              .col-sm-1
+                select.form-control(name='')
+                  option ...
+                  option ИСУ
+                  option ...
                 .help-block Обязательное
             .form-group
-              label.control-label.col-sm-1(for='') Игра
-              .col-sm-3
+              label.control-label.col-sm-1(for='') Группа
+              .col-sm-1
                 select.form-control(name='')
-                  option 15.05.2015
                   option ...
-                  option ...
-                .help-block&nbsp
-            .form-group
-              label.control-label.col-sm-1(for='') Статус
-              .col-sm-3
-                select.form-control(name='')
-                  option опубликована
-                  option скрыта
-                .help-block&nbsp
+                  option АС-10И1
+                  option БИ-10И1
+                .help-block Обязательное
             .form-group
               .col-sm-offset-1.col-sm-5
                 button.btn.btn-primary(data-disable-with='Save', name='_save', type='submit')
@@ -65,4 +71,6 @@ body.rails_admin
                 button.btn.btn-default(data-disable-with='Cancel', name='_continue', type='submit')
                   span.glyphicon.glyphicon-remove
                   |&nbsp Отмена
+          
           +footer
+

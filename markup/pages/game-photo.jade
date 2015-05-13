@@ -1,0 +1,60 @@
+include ../modules/includies/includies
++includies
+
+head
+  +head(head.photo)
+body.rails_admin
+  +navbar
+  .container-fluid
+    +nav('Фотографии')
+
+    .col-sm-10.col-md-10
+      .row
+        .content
+          .page-header
+            h1 Управление фотоальбомами
+
+          ol.breadcrumb.panel.panel-default
+            li
+              a(href='index.html') Панель управления
+            li
+              a(href='photo.html')Фотоальбомы
+            li.active Фотоальбомы к игре от 15.05.2015
+
+          ul.nav.nav-tabs
+            li.active
+              a(href='game-photo.html')
+                span.glyphicon.glyphicon-th-list
+                | &nbspСписок
+            li
+              a(href='add-photo.html')
+                span.glyphicon.glyphicon-plus
+                | &nbspДобавить
+          form.form-horizontal(accept-charset='UTF-8', action='', data-title='New User', enctype='multipart/form-data', method='post')
+            table.table.table-condensed.table-striped
+              thead
+                tr
+                  th 
+                    input(type='checkbox')
+                  th Id
+                  th Сcылка
+                  th 
+              tbody
+                each photo in photos
+                  tr
+                    td
+                      input(type='checkbox')
+                    td=photo.id
+                    td
+                      a=photo.link
+                    td.col-xs-1
+                      ul.list-inline
+                        li.pull-right(title='Удалить', rel='tooltip')
+                          a(href='#')
+                            span.glyphicon.glyphicon-trash
+                        li.pull-right(title='Редактировать', rel='tooltip')
+                          a(href='edit-team.html')
+                            span.glyphicon.glyphicon-pencil
+            .clearfix.total-count Всего: #{questions.length}
+
+          +footer
