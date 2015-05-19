@@ -34,20 +34,20 @@
 "games" : [
   {
     id: '3',
-    gameDate: '15.05.2015',
+    gameDate: '22.05.2015',
     endRegDate: '-',
     status: 'не анонсирована'
   },
   {
     id: '2',
-    gameDate: '18.04.2015',
+    gameDate: '17.04.2015',
     endRegDate: '16.05.2015',
     status: 'открыта'
   },
   {
     id: '1',
-    gameDate: '19.03.2015',
-    endRegDate: '18.03.2015',
+    gameDate: '20.03.2015',
+    endRegDate: '19.03.2015',
     status: 'закрыта'
   }
 ],
@@ -62,7 +62,7 @@
   {
     id: '1',
     name: 'Вова и медведь',
-    email: 'Loremipsum@gmail.com',
+    email: 'vlchgk@gmail.com',
     regDate: '12.02.2014'
   }
 ],
@@ -142,134 +142,133 @@
 "news": [
   {
     id:'2',
-    header: 'Анонс игры 15.05.2015',
-    date: '01.05.2015',
-    game: '15.05.2015',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, voluptate nisi sapiente illum delectus vel amet consequuntur ipsa repellendus ipsam perspiciatis cum aliquam nobis repellat itaque temporibus obcaecati corporis. Provident saepe reiciendis sed, fuga eius ducimus asperiores. Necessitatibus vero dicta nobis cum, ullam magni velit. Voluptates voluptatum ducimus quaerat quas architecto, maiores quibusdam est. Explicabo molestiae eius magnam eum ea recusandae veritatis repellendus similique alias et, nesciunt, ab maxime illum veniam blanditiis ex vero consequatur voluptates distinctio autem perspiciatis deserunt doloribus dicta assumenda. Veritatis molestias, similique asperiores totam perspiciatis, animi eos consectetur pariatur explicabo dolorem corporis atque cupiditate aut, quibusdam placeat ratione fugiat nulla dolores libero velit error minima deleniti! Deserunt in maxime, similique quam repellat, non dolor. Totam nulla, modi sint facilis. Cum delectus sapiente vitae inventore consectetur quis odit suscipit, harum minus libero molestias dolorem et praesentium nam corporis est ipsa aut error adipisci nihil cumque. Corporis, aspernatur.',
+    header: 'Анонс игры 22.05.2015',
+    date: '19.05.2015',
+    game: '22.05.2015',
+    text: 'Друзья! Наконец, 22 мая, состоится третья заключительная игра весенней серии "Что? Где? Когда?" В СибАДИ !!! Вас ждет много новых вопросов, а главное, призы ! Поспешите зарегистрироваться',
     status: 'опубликована'
   },
   {
     id:'1',
-    header: 'Lorem ipsum dolor sit.',
-    date: '28.04.2015',
+    header: 'Результаты игры от 17.04.2015',
+    date: '17.04.2015',
     game: '-',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores enim dolor ab ipsam, vero quas soluta! Ipsam exercitationem quo illo dolorum dolor sapiente vel ipsa. Dolorum nulla fugiat quaerat, unde! Repudiandae perspiciatis, recusandae reiciendis voluptates dolore blanditiis deleniti quas ab laborum veritatis tenetur minima aliquam. Deserunt laborum esse blanditiis ullam consectetur autem maxime expedita. Blanditiis iusto tenetur, consectetur fuga exercitationem non recusandae. Qui nisi accusamus, sunt enim incidunt ratione? Dignissimos illo nesciunt, odit porro cupiditate fugiat ipsam impedit possimus accusamus ab libero earum vel, voluptatem, doloremque voluptate esse. Quaerat tempore nihil consequatur voluptatibus ipsum, numquam illo. Optio, aspernatur at maxime! Distinctio eos tempora totam architecto at, libero optio expedita, voluptates aut sed quae alias debitis. Facilis recusandae, itaque. Facere obcaecati ad quis deserunt corrupti sequi fugiat atque eveniet. Aliquid, natus, quasi. Sint aliquid expedita atque asperiores iste adipisci tempore commodi, ex vero nihil beatae sequi nulla, natus voluptatibus. Deserunt quibusdam asperiores maiores, possimus. Molestias amet veniam, quaerat, error, repudiandae, sit quibusdam cupiditate quidem harum sed voluptatibus. Provident aliquam ratione repellendus eveniet, laboriosam quae reiciendis sed sunt. Minima impedit ipsum est. Maiores accusantium sed officiis voluptatibus facere temporibus harum voluptate aperiam architecto molestias voluptatem quod nesciunt iste placeat, quaerat molestiae cumque perspiciatis dolorum saepe dignissimos odit at pariatur. Cum inventore delectus similique ipsa numquam quidem, consequuntur, dolorum possimus dolore ullam unde.',
+    text: ' Спасибо за игру! Результаты игры уже <a href="game/17042015"> здесь.</a> ',
     status: 'скрыта'
   }
 ],
 
-"questions": [
-  {
-    id: '15',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
+'questions': [
+  { 
+    id: '1',
+    text: ' За право считаться ИХ родиной спорят Франкфурт и Вена. Известен случай, когда Роберт Кох подвергал ИХ термическому воздействию в своей лаборатории. Согласно советским ГОСТам, в ИХ состав должна была входить селитра. Назовите ИХ.',
+    link: '-',
+    answer: 'Сосиски'
   },
-  {
-    id: '14',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '13',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '12',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '11',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '10',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '9',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '8',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '7',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '6',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '5',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
-  },
-  {
-    id: '4',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
+  { 
+    id: '2',
+    text: 'Так определял главный принцип некоторых отличников герой фильма "Доживем до понедельника", согласно которому нужно угадать желание учителя и постараться угодить ему. Так же называли летающего друга "русских ведьм". Как?',
+    link: '-',
+    answer: 'У-2'
   },
   {
     id: '3',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
+    text: 'Происхождение ИХ названия точно неизвестно, по одной из версий, это слово родственно глаголу, означающему "ловить сетью". В наше время ОНИ атакуют своих жертв, как правило, также посредством Сети. Назовите ИХ.',
+    link: '-',
+    answer: 'Тролли'
   },
   {
-    id: '2',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
+    id: '4',
+    text: 'В состав ЭТОГО могут входить и патиссоны. ЭТО — уменьшительное имя, которое герой болгарского писателя ГЕнчо МИшева дал найденному им олененку. Назовите ЭТО.',
+    link: '-',
+    answer: 'Лечо'
   },
   {
-    id: '1',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sapiente accusantium nemo assumenda?',
-    link:'-',
-    answer: 'Lorem ipsum.'
+    id: '5',
+    text: 'В одном малоизвестном произведении персонаж по имени Александр находит мешочек, называемый "саше". А где именно?',
+    link: '-',
+    answer: 'На шоссе'
   },
-
+  {
+    id: '6',
+    text: 'Многие сцены книги "Гадкие лебеди" братьев Стругацких происходят в ресторане. Возможно, не случайно в городе, где разворачивается действие, постоянно идет дождь, как и в третьем... Чём?',
+    link: '-',
+    answer: 'Круге ада'
+  },
+  {
+    id: '7',
+    text: 'Замазка для алхимической печи называлась в честь НЕГО. Назовите ЕГО.',
+    link: '-',
+    answer: 'Гермес [ТрисмегИст]'
+  },
+  {
+    id: '8',
+    text: 'В одном стихотворении поэт Гамзат Цадаса предлагает поэту Сулейману Стальскому совершить ночную прогулку. Стальский отказывается под тем предлогом, что его место займут самозванцы. В произведении начала XX века другой автор, описывая аналогичную прогулку, упомянул звон стекол в домах. Назовите этого автора',
+    link: '-',
+    answer: '[Сельма] Лагерлёф'
+  },
+  {
+    id: '9',
+    text: 'Послушайте эпиграмму Бориса Брайнина, посвященную Вахтангу Кикабидзе: В новой роли покорил он нас, На экран с эстрады переехав. Вам желают зрители и ТАСС [ПРОПУСК] творческих успехов. Восстановите пропуск неологизмом.',
+    link: '-',
+    answer: 'МиминОвых'
+  },
+  {
+    id: '10',
+    text: 'В фильме "Паук" результат этого действия прозрачно намекает на сквозной образ фильма. Английские преступники, чтобы совершить это действие, пользовались патокой и обёрточной бумагой. Назовите результат этого действия двумя словами.',
+    link: '-',
+    answer: 'Разбитое стекло'
+  },
+  {
+    id: '11',
+    text: 'Византиец Псевдо-Дионисий Ареопагит считал, что божественный свет не виден сам по себе, он воспринимается мысленным взором. Католические богословы считали, что божественный свет стал доступен человеку благодаря ИМ. В России ИХ поначалу называли транспарантными. Назовите ИХ.',
+    link: '-',
+    answer: 'Витражи'
+  },
+  {
+    id: '12',
+    text: 'Мы надеемся, что этот вопрос возьмут и начинающие команды. Сувенирный ИКС из английского города Лейберна сделан в виде корабля под названием "Титаник". Какое слово мы заменили ИКСОМ?',
+    link: '-',
+    answer: 'Чайник'
+  },
+  {
+    id: '13',
+    text: 'Ректор Ленинградского университета Вознесенский был всюду вхож и везде желанен — родственником ректора был член политбюро. Студенты-правоведы дали ректору прозвище, заменив в термине первую букву второго слова буквой "б". Напишите получившийся вариант.',
+    link: '-',
+    answer: 'Персона брата'
+  },
+  {
+    id: '14',
+    text: 'По словам Виктора Сонькина, знаменитая фраза ученого, где упоминается опора, была лишь издевкой в адрес его заклятого соперника, человека небольшого роста. Назовите эту опору.',
+    link: '-',
+    answer: 'Плечи гигантов'
+  },
+  {
+    id: '15',
+    text: 'Дон Корлеоне назвал своего советника Тома ХЕйгена и старшего сына Сонни ИМИ. По словам БенциОна Томера, язычники не останавливаются в бесчинствах и разрушениях: ведь у них ОНИ. Назовите ИХ тремя словами.',
+    link: '-',
+    answer: 'Две правые руки'
+  }
 ],
 
 "photos": [
   {
     id: "2",
-    link: "http:sample.org/img/jdfoirjo"
+    link: "http://vk.com/photo-34874492_29003602"
   },
   {
     id: "1",
-    link: "http:sample.org/img/jdfoirjo"
+    link: "http://vk.com/photo-34874492_29003611"
   },
 ],
 
 "videos": [
   {
     id: "2",
-    link: "http:sample.org/img/jdfoirjo"
+    link: "http://vk.com/video-34874492_29003606"
   },
   {
     id: "1",
-    link: "http:sample.org/img/jdfoirjo"
+    link: "http://vk.com/video-34874488_29003611"
   },
 ]
