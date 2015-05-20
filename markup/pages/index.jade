@@ -16,15 +16,15 @@ body.rails_admin
 
           ul.breadcrumb.panel.panel-default
             li.active
-              a(href='') Панель управления
+              | Панель управления
 
           ul.nav.nav-tabs
             li.active(title='', rel='')
-              a(href='')
+              a(href='index.html')
                 span.glyphicon.glyphicon-home(aria-hidden='true') 
                 | &nbsp Панель управления
 
-          -var tables = ['Команды','Игроки','Новости','Сезоны','Фото','Видео','Вопросы']
+          //- -var tables = ['Команды','Игроки','Новости','Сезоны','Фото','Видео','Вопросы']
           table.table.table-condensed.table-striped.table-hover
             thead
               tr
@@ -34,24 +34,27 @@ body.rails_admin
                 th.records Автор изменений
                 th.controls.col-xs-3.col-md-2.col-lg-1
             tbody
+              - var i = 0
               each table in tables
                 tr
                   td
                     span.show
-                      = table
+                      = table.name
                   td
-                    span.badge 0
-                  td 11.05.2015 13:45:20
+                    span.badge= table.records
+                  td= table.date
                   td admin#1
                   td.links.col-xs-3.col-md-2.col-lg-1
                     ul.list-inline
                       li(title='Список', rel='tooltip')
                           a.pjax(href='#')
                             span.glyphicon.glyphicon-th-list
-                      if table !== 'Команды'
+                      if table.name !== 'Команды'
                         li(title='Добавить', rel='tooltip')
                             a.pjax(href='#')
                               span.glyphicon.glyphicon-plus
+
+          
           //- #block-tables.block
             .content
               h2 History

@@ -63,7 +63,7 @@ body.rails_admin
                     td.col-xs-1
                       ul.list-inline
                         li.pull-right(title='Удалить', rel='tooltip')
-                          a(href='#')
+                          a(href="#myModal", role="button", data-toggle="modal")
                             span.glyphicon.glyphicon-trash
                         li.pull-right(title='Редактировать', rel='tooltip')
                           a(href='#')
@@ -77,5 +77,20 @@ body.rails_admin
                             a(href='#')
                               span.glyphicon.glyphicon-play
           .clearfix.total-count Всего: #{news.length}
+
+          #myModal.modal.fade
+            .modal-dialog
+              .modal-content
+                .modal-header
+                  button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                  h4.modal-title Подтверждение
+                .modal-body
+                  p Вы действительно хотите удалить выбранные элементы?
+                  p.text-warning
+                    small Отменить действие будет невозможно.
+                .modal-footer
+                  button.btn.btn-default(type='button', data-dismiss='modal') Отмена
+                  button.btn.btn-primary(type='button') Удалить
+
           +footer
 
